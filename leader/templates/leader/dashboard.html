@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{%block body%}
+These are the curations:
+{% for curation in curations%}
+<hr>
+<h3>Author:{{curation.user}}</h3>
+<b>TItle:</b><a href="{% url 'curation_detail' curation.id%}">{{curation.title}}</a><br>
+<b>sub-title:</b>{{curation.sub_title}}
+<h5>Sample:{{curation.text|truncatechars:300}}</h5>
+<form action="{% url 'remove_curation' curation.id%}" method="post">
+    <input type="submit" value="Delete">
+    {% csrf_token %}
+</form>
+<a href="{% url 'edit_curation' curation.id%}"><button>Edit</button></a>
+<form action="{% url 'accept' curation.id%}" method="post">
+    <input type="submit" value="Accept">
+    {% csrf_token %}
+</form>
+
+<hr>
+{%endfor%}
+{%endblock%}
