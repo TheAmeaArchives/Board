@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <a href="{% url 'curation'%}">Home</a><br>
+    <a href="{% url 'leader'%}">Leader Board</a><br>
+    <a href="{% url 'accepted' %}">Accepted</a><br>
+    {%block body%}{% endblock %}
+</body>
+</html>

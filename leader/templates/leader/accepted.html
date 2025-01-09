@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block body%}
+{%for curation in curations%}
+<hr>
+<h3>Author:{{curation.user}}</h3>
+<b>Title:</b><a href="{% url 'curation_detail' curation.id%}">{{curation.title}}</a><br>
+<b>sub-title:</b>{{curation.sub_title}}
+<h5>Sample: {{curation.text}}</h5>
+<hr>
+{%endfor%}
+{%endblock%}

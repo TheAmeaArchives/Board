@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block body %} 
+<br>
+
+
+
+<br>   
+{% if messages%}
+{% for message in messages%}
+<div style="background-color: green;">{{message}}</div>
+{%endfor%}
+{% endif %}
+This is the form that the Curator should fill:
+<form action="" method="post">
+     {{form.as_p}}
+     {% csrf_token %}
+     <input type="submit" name="Submit curation">
+</form>
+       
+{%endblock%}

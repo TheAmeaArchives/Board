@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  
+    
+ 
+    <form method="POST">
+        {% csrf_token %}
+                <br>
+    {% if message %}
+    <h4>If you do not have an account, create it via the link below.</h4>
+    {% endif %}
+
+                {% for logo in logo %}
+    <img src="{{logo.profile.url}}" class="rounded-circle" alt="no image" width="120">
+                {% endfor%}
+                <h4>Connect</h4>
+   <br>
+            <label for="floatingInput">Pseudo</label>
+            <input type="text" name="username" placeholder="Pseudo">
+        <br>
+            <label for="floatingPassword">Password</label>
+            <input type="password" name="password"placeholder="Mot de passe">
+           
+   
+          <br>
+          <button type="submit">Connect/Sign in</button>
+          
+    </form>
+    
+    
+
+        <div >
+            <div ><a href="{% url 'signup' %}"><h3>Create an account</h3></a>
+
+</body>
+</html>
