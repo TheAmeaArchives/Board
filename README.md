@@ -1,6 +1,6 @@
 # 📜AMEA Archives Curator Application 
 
-This repository contains a Django-based web application named **AMEA Archives Curator Application**. It is designed to facilitate the submission and validation of curations by curators, with oversight from a curator head. The application also includes a leaderboard ranking system to highlight the most active users based on the pertinence and acceptance of their curations. 🚀
+This repository contains a Django-based web application named **Amea Archives Curator Application**. It is designed to facilitate the submission and validation of curations by curators, with oversight from a curator head. The application also includes a leaderboard ranking system to highlight the most active users based on the pertinence and acceptance of their curations. 🚀
 
 ## ✨ Features 
 - Curator authentication and management.
